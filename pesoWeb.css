@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Full page background image */
+body {
+    background: url('') no-repeat center center fixed; /* Replace 'background.jpg' with your image path */
+    background-size: cover; /* Ensure the image covers the entire page */
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay for silhouette effect */
+    z-index: -1; /* Make sure the overlay is behind the content */
+}
+
+.container {
+    z-index: 1; /* Ensure the content stays above the background */
+    padding: 20px; /* Add some padding to the container for spacing */
+}
+
+/* Styling for the central text */
+.main-heading {
+    font-size: 48px; /* Increased font size for visibility */
+    font-weight: bold; /* Make the text bold */
+    color: #FFA500; /* Bright orange color for better contrast */
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+    margin-bottom: 40px; /* Add margin for spacing from the buttons */
+}
+
+/* Photo button styling */
+.photo-button img {
+    width: 250px; /* Increased size for the buttons */
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-button img:hover {
+    transform: scale(1.1); /* Larger zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.row .col {
+    padding: 10px; /* Ensure spacing between the buttons */
+}
